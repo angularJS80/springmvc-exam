@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cho.me.app.mapper.MemberMapper">
+  <select id="selectMemberOne" resultType="cho.me.app.dto.MemberDto">
+    SELECT `member`.`id`,
+	    `member`.`activated`,
+	    `member`.`activation_key`,
+	    `member`.`created_by`,
+	    `member`.`created_date`,
+	    `member`.`email`,
+	    `member`.`last_modified_by`,
+	    `member`.`last_modified_date`,
+	    `member`.`login`,
+	    `member`.`name`,
+	    `member`.`password_hash`,
+	    `member`.`reset_date`,
+	    `member`.`reset_key`
+	FROM `sbtry`.`member`
+	where id = 1
+
+  </select>
+  
+  <select id="selectMemberList" resultType="cho.me.app.dto.MemberDto">
+    SELECT `member`.`id`,
+	    `member`.`activated`,
+	    `member`.`activation_key`,
+	    `member`.`created_by`,
+	    `member`.`created_date`,
+	    `member`.`email`,
+	    `member`.`last_modified_by`,
+	    `member`.`last_modified_date`,
+	    `member`.`login`,
+	    `member`.`name`,
+	    `member`.`password_hash`,
+	    `member`.`reset_date`,
+	    `member`.`reset_key`
+	FROM `sbtry`.`member`
+  </select>
+	<insert id="insertMember">
+		INSERT INTO `sbtry`.`member`
+		(`id`,
+		`activated`,
+		`activation_key`,
+		`created_by`,
+		`email`,
+		`last_modified_by`,
+		`login`,
+		`name`,
+		`password_hash`,
+		`reset_key`)
+		VALUES
+		(
+		1,
+		1,
+		1,
+		1,
+		1,
+		1,
+		1,
+		1,
+		1,
+		1
+		);
+	</insert>
+
+
+
+</mapper>
+
